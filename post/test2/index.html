@@ -101,7 +101,7 @@
         <a href="https://navieclipse.github.io/post/test2/">Hugo on GitHub Pages</a>
     </h2>
     <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-09-27</span><span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;460 字</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/hugo">hugo</a>&nbsp;</span>
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-09-27</span><span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;448 字</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/hugo">hugo</a>&nbsp;</span>
 
     </div>
     
@@ -110,13 +110,6 @@
         <p>Hugo on GitHub Pages のメモ</p>
 <h2 id="概要">概要</h2>
 <p><a href="https://gohugo.io/" target="_blank">Hugo</a> という静的サイトの作成エンジンがあったので使ってみる。個人的なメモなので人目につかない Git Pages は割とありという需要があった。</p>
-<figure>
-    <img src="./../hhkb.JPG"
-         alt="特に関係のないキーボード"/> <figcaption>
-            <p>特に関係のないキーボード</p>
-        </figcaption>
-</figure>
-
 <h2 id="インストールテーマ">インストール・テーマ</h2>
 <p>Windows に入れたので Scoop 経由で install した。 <a href="https://gohugo.io/getting-started/installing" target="_blank">Install Hugo</a>
 いろいろとテーマが投稿されていたが、ダークテーマと切り替えられる+シンプルな <a href="https://github.com/amzrk2/hugo-theme-fuji/" target="_blank">hugo-theme-fuji</a> を使わせてもらうことにした。自分でも作れるようだが時間がかかりそうなので気が向いたときにでも。</p>
@@ -128,7 +121,7 @@
 <h2 id="code-test">code test</h2>
 <pre><code class="language-shell">#!/bin/bash
 hugo new post/$1.md #記事のファイル作成
-code post/$1.md #記事編集(VScode)
+code ./content/post/$1.md #記事編集(VScode)
 </code></pre>
 <h3 id="参考">参考</h3>
 <ul>
@@ -183,6 +176,10 @@ code post/$1.md #記事編集(VScode)
             
             <span>
                 <a href="/tags/hugo/">hugo</a>
+            </span>
+            
+            <span>
+                <a href="/tags/keyboard/">keyboard</a>
             </span>
             
         </div>
