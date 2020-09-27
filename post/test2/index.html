@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     
@@ -15,7 +15,7 @@
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/amzrk2/cdn-stcapi@1/favicons/favicon.ico" />
 
 
-<title>Test2 - memo</title>
+<title>Hugo on GitHub Pages - memo</title>
 
 
 <meta name="author" content="navieclipse" />
@@ -24,8 +24,10 @@
 <meta name="description" content="A minimal Hugo theme with nice theme color." />
 
 
-<meta property="og:title" content="Test2" />
-<meta property="og:description" content="test2 aaaa" />
+<meta name="keywords" content="tech" />
+
+<meta property="og:title" content="Hugo on GitHub Pages" />
+<meta property="og:description" content="Hugo on GitHub Pages のメモ" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://navieclipse.github.io/post/test2/" />
 <meta property="og:image" content="https://navieclipse.github.io/img/og.png"/>
@@ -35,8 +37,8 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://navieclipse.github.io/img/og.png"/>
 
-<meta name="twitter:title" content="Test2"/>
-<meta name="twitter:description" content="test2 aaaa"/>
+<meta name="twitter:title" content="Hugo on GitHub Pages"/>
+<meta name="twitter:description" content="Hugo on GitHub Pages のメモ"/>
 
 
 
@@ -96,26 +98,41 @@
 <article>
     
     <h2 class="post-item post-title">
-        <a href="https://navieclipse.github.io/post/test2/">Test2</a>
+        <a href="https://navieclipse.github.io/post/test2/">Hugo on GitHub Pages</a>
     </h2>
     <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-09-27</span><span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;2 words</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;No tag</span>
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-09-27</span><span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;433 字</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/tech">tech</a>&nbsp;</span>
 
     </div>
     
     
     <div class="post-content markdown-body">
-        <h2 id="test2">test2</h2>
-<p>aaaa</p>
+        <p>Hugo on GitHub Pages のメモ</p>
+<p><img class="img-zoomable" src="/data/hhkb.JPG" alt="" />
 
+何の関係もないキーボードの写真 o</p>
+<h2 id="概要">概要</h2>
+<p><a href="https://gohugo.io/" target="_blank">Hugo</a> という静的サイトの作成エンジンがあったので使ってみる。個人的なメモなので人目につかない Git Pages は割とありという需要があった。</p>
+<h2 id="インストールテーマ">インストール・テーマ</h2>
+<p>Windows に入れたので Scoop 経由で install した。 <a href="https://gohugo.io/getting-started/installing" target="_blank">Install Hugo</a>
+いろいろとテーマが投稿されていたが、ダークテーマと切り替えられる+シンプルな <a href="https://github.com/amzrk2/hugo-theme-fuji/" target="_blank">hugo-theme-fuji</a> を使わせてもらうことにした。自分でも作れるようだが時間がかかりそうなので気が向いたときにでも。</p>
+<h2 id="ハマった点">ハマった点</h2>
+<p>Git pages でホストする方法として公式の doc を参考にした <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/" target="_blank">Host on GitHub | Hugo</a>。
+この方法で作成する場合、GitHub のリポジトリを下書き用と pages 用の 2 つ用意して git の機能であるサブモジュールで連携する必要があるが、これが使い慣れてないのでハマった。
+どうも <code>hugo</code> コマンドで生成される public フォルダを下書き用レポジトリ側で <code>git add</code> すると上手く <code>git submodule add -b master ~~~ public</code> できなかった？git わからん。
+とりあえず動いたのでよし。。</p>
+<h3 id="参考">参考</h3>
+<ul>
+<li><a href="https://www.membersedge.co.jp/blog/create-hugo-theme-and-deploy-to-github-pages/" target="_blank">Hugo で 1 からテーマを作って GitHub Pages にデプロイする | メンバーズエッジカンパニーブログ</a></li>
+</ul>
     </div>
 </article>
 
 
 <div class="license markdown-body">
     <blockquote>
-        <p>Unless otherwise noted, the content of this site is licensed under <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
-               target="_blank">CC BY-NC-SA 4.0</a>.</p>
+        <p>特定のセクションを除いて、このサイトは <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+               target="_blank">CC BY-NC-SA 4.0</a> の下に提供されています。</p>
     </blockquote>
 </div>
 
@@ -125,7 +142,7 @@
             <aside class="col-12 col-md-3 float-left sidebar">
     
     <div class="sidebar-item sidebar-pages">
-        <h3>Pages</h3>
+        <h3>ページ</h3>
         <ul>
             
             <li>
@@ -152,14 +169,18 @@
     </div>
     
     <div class="sidebar-item sidebar-tags">
-        <h3>Tags</h3>
+        <h3>タグ</h3>
         <div>
+            
+            <span>
+                <a href="/tags/tech/">tech</a>
+            </span>
             
         </div>
     </div>
     
     <div class="sidebar-item sidebar-links">
-        <h3>Links</h3>
+        <h3>リンク</h3>
         <ul>
             
             <li>
@@ -176,10 +197,16 @@
     
     
     <div class="sidebar-item sidebar-toc">
-        <h3>TOC</h3>
+        <h3>目次</h3>
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#test2">test2</a></li>
+    <li><a href="#概要">概要</a></li>
+    <li><a href="#インストールテーマ">インストール・テーマ</a></li>
+    <li><a href="#ハマった点">ハマった点</a>
+      <ul>
+        <li><a href="#参考">参考</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>

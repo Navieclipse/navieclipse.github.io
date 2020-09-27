@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tech on memo</title>
+    <link>https://navieclipse.github.io/tags/tech/</link>
+    <description>Recent content in tech on memo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 27 Sep 2020 00:44:00 +0900</lastBuildDate><atom:link href="https://navieclipse.github.io/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo on GitHub Pages</title>
+      <link>https://navieclipse.github.io/post/test2/</link>
+      <pubDate>Sun, 27 Sep 2020 00:44:00 +0900</pubDate>
+      
+      <guid>https://navieclipse.github.io/post/test2/</guid>
+      <description>&lt;p&gt;Hugo on GitHub Pages のメモ&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

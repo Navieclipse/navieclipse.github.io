@@ -5,26 +5,24 @@
     <link>https://navieclipse.github.io/post/</link>
     <description>Recent content in Posts on memo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
+    <language>ja</language>
     <lastBuildDate>Sun, 27 Sep 2020 00:44:00 +0900</lastBuildDate><atom:link href="https://navieclipse.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test1</title>
-      <link>https://navieclipse.github.io/post/test1/</link>
-      <pubDate>Sun, 27 Sep 2020 00:44:00 +0900</pubDate>
-      
-      <guid>https://navieclipse.github.io/post/test1/</guid>
-      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
-&lt;h2 id=&#34;headings&#34;&gt;Headings&lt;/h2&gt;
-&lt;p&gt;The following HTML &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;—&lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; elements represent six levels of section headings. &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; is the highest section level while &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; is the lowest.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Test2</title>
+      <title>Hugo on GitHub Pages</title>
       <link>https://navieclipse.github.io/post/test2/</link>
       <pubDate>Sun, 27 Sep 2020 00:44:00 +0900</pubDate>
       
       <guid>https://navieclipse.github.io/post/test2/</guid>
-      <description>test2 aaaa</description>
+      <description>&lt;p&gt;Hugo on GitHub Pages のメモ&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>見本</title>
+      <link>https://navieclipse.github.io/post/test1/</link>
+      <pubDate>Sun, 27 Sep 2020 00:44:00 +0900</pubDate>
+      
+      <guid>https://navieclipse.github.io/post/test1/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
     </item>
     
   </channel>

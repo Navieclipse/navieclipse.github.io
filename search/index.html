@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     
@@ -103,9 +103,9 @@
     </form>
 </div>
 
-<div class="search-result-info" style="display: none;"><span>[NUM] results ([TIME] ms)</span></div>
-<div class="search-result-info" style="display: none;"><span>Results not found</span></div>
-<div class="search-result-info" style="display: none;"><span>Failed to load index file</span></div>
+<div class="search-result-info" style="display: none;"><span>[NUM] 件 ([TIME] ミリ秒)</span></div>
+<div class="search-result-info" style="display: none;"><span>検索できませんでした</span></div>
+<div class="search-result-info" style="display: none;"><span>インデックスを取得できません</span></div>
 <div id="search-result"></div>
 <script id="search-result-template" type="text/fuse-template">
     <% for(var i = 0; i < $data.length; i++){ %>
@@ -116,7 +116,7 @@
         <div class="post-item post-meta-archive">
             <span><i class="iconfont icon-today-sharp"></i>&nbsp;<%= $data[i].item.date %></span>
             <span>
-                <i class="iconfont icon-pricetags-sharp"></i>&nbsp;<% if ($data[i].item.tags && $data[i].item.tags.length > 0) { %><% for(var j = 0; j < $data[i].item.tags.length; j++){ %><%= $data[i].item.tags[j] %>&nbsp;<% } %><% } else { %>No tag<% } %>
+                <i class="iconfont icon-pricetags-sharp"></i>&nbsp;<% if ($data[i].item.tags && $data[i].item.tags.length > 0) { %><% for(var j = 0; j < $data[i].item.tags.length; j++){ %><%= $data[i].item.tags[j] %>&nbsp;<% } %><% } else { %>タグはありません<% } %>
             </span>
         </div>
     </div>
@@ -127,7 +127,7 @@
             <aside class="col-12 col-md-3 float-left sidebar">
     
     <div class="sidebar-item sidebar-pages">
-        <h3>Pages</h3>
+        <h3>ページ</h3>
         <ul>
             
             <li>
@@ -154,14 +154,18 @@
     </div>
     
     <div class="sidebar-item sidebar-tags">
-        <h3>Tags</h3>
+        <h3>タグ</h3>
         <div>
+            
+            <span>
+                <a href="/tags/tech/">tech</a>
+            </span>
             
         </div>
     </div>
     
     <div class="sidebar-item sidebar-links">
-        <h3>Links</h3>
+        <h3>リンク</h3>
         <ul>
             
             <li>
