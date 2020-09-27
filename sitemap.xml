@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://navieclipse.github.io/tags/hugo/</loc>
+    <lastmod>2020-09-27T00:44:00+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://navieclipse.github.io/post/test2/</loc>
     <lastmod>2020-09-27T00:44:00+09:00</lastmod>
   </url>
@@ -14,11 +19,6 @@
   
   <url>
     <loc>https://navieclipse.github.io/post/</loc>
-    <lastmod>2020-09-27T00:44:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://navieclipse.github.io/tags/tech/</loc>
     <lastmod>2020-09-27T00:44:00+09:00</lastmod>
   </url>
   

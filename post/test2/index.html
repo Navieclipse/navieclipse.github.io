@@ -24,7 +24,7 @@
 <meta name="description" content="A minimal Hugo theme with nice theme color." />
 
 
-<meta name="keywords" content="tech" />
+<meta name="keywords" content="hugo" />
 
 <meta property="og:title" content="Hugo on GitHub Pages" />
 <meta property="og:description" content="Hugo on GitHub Pages のメモ" />
@@ -84,7 +84,7 @@
         <div class="col-12 header">
             <a class="title-main" href="https://navieclipse.github.io">memo</a>
             
-            <span class="title-sub">memo</span>
+            <span class="title-sub">scripts, database and etc..</span>
             
         </div>
     </div>
@@ -101,18 +101,22 @@
         <a href="https://navieclipse.github.io/post/test2/">Hugo on GitHub Pages</a>
     </h2>
     <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-09-27</span><span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;433 字</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/tech">tech</a>&nbsp;</span>
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-09-27</span><span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;460 字</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/hugo">hugo</a>&nbsp;</span>
 
     </div>
     
     
     <div class="post-content markdown-body">
         <p>Hugo on GitHub Pages のメモ</p>
-<p><img class="img-zoomable" src="/data/hhkb.JPG" alt="" />
-
-何の関係もないキーボードの写真 o</p>
 <h2 id="概要">概要</h2>
 <p><a href="https://gohugo.io/" target="_blank">Hugo</a> という静的サイトの作成エンジンがあったので使ってみる。個人的なメモなので人目につかない Git Pages は割とありという需要があった。</p>
+<figure>
+    <img src="./../hhkb.JPG"
+         alt="特に関係のないキーボード"/> <figcaption>
+            <p>特に関係のないキーボード</p>
+        </figcaption>
+</figure>
+
 <h2 id="インストールテーマ">インストール・テーマ</h2>
 <p>Windows に入れたので Scoop 経由で install した。 <a href="https://gohugo.io/getting-started/installing" target="_blank">Install Hugo</a>
 いろいろとテーマが投稿されていたが、ダークテーマと切り替えられる+シンプルな <a href="https://github.com/amzrk2/hugo-theme-fuji/" target="_blank">hugo-theme-fuji</a> を使わせてもらうことにした。自分でも作れるようだが時間がかかりそうなので気が向いたときにでも。</p>
@@ -121,6 +125,11 @@
 この方法で作成する場合、GitHub のリポジトリを下書き用と pages 用の 2 つ用意して git の機能であるサブモジュールで連携する必要があるが、これが使い慣れてないのでハマった。
 どうも <code>hugo</code> コマンドで生成される public フォルダを下書き用レポジトリ側で <code>git add</code> すると上手く <code>git submodule add -b master ~~~ public</code> できなかった？git わからん。
 とりあえず動いたのでよし。。</p>
+<h2 id="code-test">code test</h2>
+<pre><code class="language-shell">#!/bin/bash
+hugo new post/$1.md #記事のファイル作成
+code post/$1.md #記事編集(VScode)
+</code></pre>
 <h3 id="参考">参考</h3>
 <ul>
 <li><a href="https://www.membersedge.co.jp/blog/create-hugo-theme-and-deploy-to-github-pages/" target="_blank">Hugo で 1 からテーマを作って GitHub Pages にデプロイする | メンバーズエッジカンパニーブログ</a></li>
@@ -173,7 +182,7 @@
         <div>
             
             <span>
-                <a href="/tags/tech/">tech</a>
+                <a href="/tags/hugo/">hugo</a>
             </span>
             
         </div>
@@ -202,7 +211,8 @@
   <ul>
     <li><a href="#概要">概要</a></li>
     <li><a href="#インストールテーマ">インストール・テーマ</a></li>
-    <li><a href="#ハマった点">ハマった点</a>
+    <li><a href="#ハマった点">ハマった点</a></li>
+    <li><a href="#code-test">code test</a>
       <ul>
         <li><a href="#参考">参考</a></li>
       </ul>
