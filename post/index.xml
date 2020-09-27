@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on memo</title>
+    <link>https://navieclipse.github.io/post/</link>
+    <description>Recent content in Posts on memo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 27 Sep 2020 00:44:00 +0900</lastBuildDate><atom:link href="https://navieclipse.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test2</title>
+      <link>https://navieclipse.github.io/post/test1/</link>
+      <pubDate>Sun, 27 Sep 2020 00:44:00 +0900</pubDate>
+      
+      <guid>https://navieclipse.github.io/post/test1/</guid>
+      <description>test1 bbb</description>
+    </item>
+    
+    <item>
+      <title>Test2</title>
+      <link>https://navieclipse.github.io/post/test2/</link>
+      <pubDate>Sun, 27 Sep 2020 00:44:00 +0900</pubDate>
+      
+      <guid>https://navieclipse.github.io/post/test2/</guid>
+      <description>test2 aaaa</description>
+    </item>
+    
+  </channel>
+</rss>
