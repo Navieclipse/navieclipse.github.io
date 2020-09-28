@@ -6,7 +6,16 @@
     <description>Recent content on memo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 28 Sep 2020 00:05:01 +0900</lastBuildDate><atom:link href="https://navieclipse.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Sep 2020 16:03:27 +0900</lastBuildDate><atom:link href="https://navieclipse.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows開発環境</title>
+      <link>https://navieclipse.github.io/post/windows%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83/</link>
+      <pubDate>Mon, 28 Sep 2020 16:03:27 +0900</pubDate>
+      
+      <guid>https://navieclipse.github.io/post/windows%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83/</guid>
+      <description>&lt;p&gt;自宅PCの開発環境整えることを忘れていたので WSL2 とか Windows Terminal とか入れる&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>キーボード</title>
       <link>https://navieclipse.github.io/post/%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89/</link>
