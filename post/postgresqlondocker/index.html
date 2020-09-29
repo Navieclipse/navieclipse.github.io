@@ -101,7 +101,7 @@
         <a href="https://navieclipse.github.io/post/postgresqlondocker/">PostgreSQL on Docker</a>
     </h2>
     <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-09-29</span><span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;77 字</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/postgresql">postgresql</a>&nbsp;<a href="/tags/docker">docker</a>&nbsp;</span>
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-09-29</span><span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;298 字</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/postgresql">postgresql</a>&nbsp;<a href="/tags/docker">docker</a>&nbsp;</span>
 
     </div>
     
@@ -111,6 +111,53 @@
 <h2 id="いろんなバージョンを作っては消ししたい">いろんなバージョンを作っては消ししたい</h2>
 <p>色々なバージョンの PostgreSQL を立てては捨てているので docker が便利。公式のやつを使おう。</p>
 <p><a href="https://hub.docker.com/_/postgres/" target="_blank">postgres - Docker Hub</a></p>
+<h3 id="client">client</h3>
+<p>psql は入れておきましょう</p>
+<p><code>$ sudo apt install postgresql-client-12</code></p>
+<h3 id="適当に立てる消す場合">適当に立てる、消す場合</h3>
+<p>from <a href="https://qiita.com/hoto17296/items/070857971f95017b5e07" target="_blank">とりあえず Docker で PostgreSQL を動かす手順 - Qiita</a></p>
+<p>alpine はシンプルな linux <a href="https://alpinelinux.org/" target="_blank">index | Alpine Linux</a></p>
+<pre><code>$ docker run --rm -d \
+    -p 15432:5432 \
+    -v postgres-tmp:/var/lib/postgresql/data \
+    -e POSTGRES_HOST_AUTH_METHOD=trust \
+    postgres:12-alpine
+</code></pre>
+<h4 id="接続">接続</h4>
+<p>trust 指定しているのでパスワード無し</p>
+<p><code>$ psql -h localhost -p 15432 -U postgres</code></p>
+<h4 id="今動いてるやつ一覧">今動いてるやつ一覧</h4>
+<p><code>$ docker ps</code></p>
+<h4 id="コンテナidをゲットしたら下記でさよなら">コンテナIDをゲットしたら下記でさよなら</h4>
+<p>正直適当</p>
+<p><code>$ docker rm -f &lt;コンテナID&gt;</code></p>
+<h3 id="docker-compose-でちょっと丁寧に">docker compose でちょっと丁寧に</h3>
+<p>from <a href="https://crudzoo.com/blog/docker-postgres" target="_blank">Docker で作る postgres 環境 | Crudzoo</a></p>
+<h4 id="docker-file">docker file</h4>
+<pre><code>FROM postgres:12-alpine
+</code></pre>
+<h4 id="docker-composeyaml">docker-compose.yaml</h4>
+<pre><code>version: '3'
+services:
+  db:
+    build: .
+    ports:
+      - 15432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: testdb
+</code></pre>
+<h4 id="起動停止">起動、停止</h4>
+<pre><code>$ ls
+Dockerfile  docker-compose.yaml
+</code></pre>
+<p>起動</p>
+<p><code>docker-compose up -d</code></p>
+<p>接続</p>
+<p><code>psql -h localhost -p 15432 -U postgres</code></p>
+<p>停止</p>
+<p><code>docker-compose down</code></p>
     </div>
 </article>
 
@@ -206,7 +253,13 @@
         <h3>目次</h3>
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#いろんなバージョンを作っては消ししたい">いろんなバージョンを作っては消ししたい</a></li>
+    <li><a href="#いろんなバージョンを作っては消ししたい">いろんなバージョンを作っては消ししたい</a>
+      <ul>
+        <li><a href="#client">client</a></li>
+        <li><a href="#適当に立てる消す場合">適当に立てる、消す場合</a></li>
+        <li><a href="#docker-compose-でちょっと丁寧に">docker compose でちょっと丁寧に</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
