@@ -101,7 +101,7 @@
         <a href="https://navieclipse.github.io/post/postgresqlondocker/">PostgreSQL on Docker</a>
     </h2>
     <div class="post-item post-meta">
-        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-09-29</span><span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;298 字</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/postgresql">postgresql</a>&nbsp;<a href="/tags/docker">docker</a>&nbsp;</span>
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-09-29</span><span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;354 字</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/postgresql">postgresql</a>&nbsp;<a href="/tags/docker">docker</a>&nbsp;</span>
 
     </div>
     
@@ -111,6 +111,8 @@
 <h2 id="いろんなバージョンを作っては消ししたい">いろんなバージョンを作っては消ししたい</h2>
 <p>色々なバージョンの PostgreSQL を立てては捨てているので docker が便利。公式のやつを使おう。</p>
 <p><a href="https://hub.docker.com/_/postgres/" target="_blank">postgres - Docker Hub</a></p>
+<p>公式の解説があったがこれは上使ってないな。</p>
+<p><a href="https://docs.docker.jp/engine/examples/postgresql_service.html" target="_blank">PostgreSQL の Docker 化 — Docker-docs-ja 17.06 ドキュメント</a></p>
 <h3 id="client">client</h3>
 <p>psql は入れておきましょう</p>
 <p><code>$ sudo apt install postgresql-client-12</code></p>
@@ -122,6 +124,9 @@
     -v postgres-tmp:/var/lib/postgresql/data \
     -e POSTGRES_HOST_AUTH_METHOD=trust \
     postgres:12-alpine
+</code></pre>
+<h4 id="postgresqlconf-も設定する場合">postgresql.conf も設定する場合</h4>
+<pre><code>$ docker run -d --name some-postgres -v &quot;$PWD/my-postgres.conf&quot;:/etc/postgresql/postgresql.conf -e POSTGRES_PASSWORD=mysecretpassword postgres -c 'config_file=/etc/postgresql/postgresql.conf'
 </code></pre>
 <h4 id="接続">接続</h4>
 <p>trust 指定しているのでパスワード無し</p>
@@ -148,6 +153,7 @@ services:
       POSTGRES_PASSWORD: password
       POSTGRES_DB: testdb
 </code></pre>
+<h4 id="postgresqlconf">postgresql.conf</h4>
 <h4 id="起動停止">起動、停止</h4>
 <pre><code>$ ls
 Dockerfile  docker-compose.yaml
